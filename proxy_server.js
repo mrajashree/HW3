@@ -22,7 +22,7 @@ var childs = [];
 for(i in ports)
 {
 	child = spawn('node',['main.js',ports[i]])
-	childs.push(i)
+	childs.push(child)
 }
 
 var options = {};
@@ -43,6 +43,7 @@ function kill_all()
 	{
 		childs[i].kill('SIGHUP')
 	}
+	process.exit();
 }
 
 process.on('exit', function(){kill_all();} );
