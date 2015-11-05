@@ -14,7 +14,6 @@ client.lpush(['hosts','http://127.0.0.1:3001'],function(err, value) {
 	console.log("VALUE : ",value)
 })
 
-//as it is from infrastructure.js, except for the queue part
 var options = {};
 var proxy   = httpProxy.createProxyServer(options);
 
