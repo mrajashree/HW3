@@ -12,10 +12,6 @@ var client = redis.createClient(6379, '127.0.0.1', {})
 var images = [];
 app.use(function(req, res, next) 
 {
-	//console.log(req.method, req.url);
-
-	// ... INSERT HERE.
-
 	client.lpush(['recent_sites',req.url], function(err,reply) {
 		//console.log(reply);
 		})
