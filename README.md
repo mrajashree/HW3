@@ -14,7 +14,13 @@ The files main.js and proxy_server.js complete the following requirements:
     If we run main.js on port 3000, then localhost:3000/recent displays a list of 5 recently visited sites
 3. Complete upload/meow
     
-    The curl command is used to upload image from the command line. The method /upload saves this image in a queue. The method /meow pops it from the queue and displays on localhost:3000/meow if main.js is running on 3000.
+    The following curl command is used to upload image from the command line.
+
+    ```
+    curl -F "image=@./img/morning.jpg" localhost:3000/upload
+    ```
+
+    The method /upload saves this image in a queue. The method /meow pops it from the queue and displays on localhost:3000/meow if main.js is running on 3000.
 4. Additional service instance
     
     Suppose the main.js is already running on port 3000, an additional instance can be run on another port, say 3001.
