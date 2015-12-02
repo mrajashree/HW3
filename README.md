@@ -43,4 +43,6 @@ The files main.js and proxy_server.js complete the following requirements:
     ```
     This code runs the commands to start main.js on port 3000 and 3001, so the user doesn't have to run individual commands to start the processes on those ports
 
+I've also added IP rule to forward packets sent to localhost/ to localhost:8080 on which my proxy server is running, so if user hits localhost/
+
 Link to screencast: https://youtu.be/45p87f3JtiY
